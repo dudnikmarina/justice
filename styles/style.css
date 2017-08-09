@@ -15,6 +15,7 @@ img {
   height: auto; }
 
 a {
+  outline: none;
   text-decoration: none;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -65,6 +66,7 @@ h1 {
   color: #000000; }
 
 .navbar-toggler {
+  outline: none;
   border: none;
   background: white;
   cursor: pointer;
