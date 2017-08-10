@@ -1,11 +1,30 @@
 
 /*slick*/
+
 $('.main-slider').slick({
     dots: true,
-    autoplay: false,
+    infinite: true,
+    autoplay: true,
     pauseOnHover: true,
     arrows: true
 });
+
+
+/*slick*/
+$('.slider-brends').slick({
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    pauseOnHover: true,
+    responsive: [{
+        breakpoint: 768,
+        settings: {
+            slidesToShow: 3,
+        }
+    }]
+    });
+
 
 /*menu-navbar*/
 $(document).ready(function () {

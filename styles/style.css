@@ -14,6 +14,18 @@ img {
   max-width: 100%;
   height: auto; }
 
+.btn {
+  background: black;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  padding: 9px 13px;
+  border: none; }
+  .btn .medium-btn {
+    padding: 14px 55px; }
+  .btn .big-btn {
+    width: 100%; }
+
 a {
   outline: none;
   text-decoration: none;
@@ -23,7 +35,8 @@ a {
 
 .wrapper {
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+  font-size: 0; }
 
 .container {
   max-width: 1248px;
@@ -66,7 +79,6 @@ h1 {
   color: #000000; }
 
 .navbar-toggler {
-  outline: none;
   border: none;
   background: white;
   cursor: pointer;
@@ -209,77 +221,64 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
-.slider {
+.main-slider .slider {
   background-image: url("../images/2-layers.png"); }
-
-.slider, .slider-men {
+.main-slider .slider, .main-slider .slider-men {
   background-size: cover;
   background-position: 50% 50%;
   overflow: hidden;
   height: 480px; }
-  .slider .container-description, .slider-men .container-description {
+  .main-slider .slider .container-description, .main-slider .slider-men .container-description {
     color: white;
     text-align: center; }
-  .slider .container-slider, .slider-men .container-slider {
+  .main-slider .slider .container-slider, .main-slider .slider-men .container-slider {
     display: flex;
     height: 100%;
     flex-direction: column;
     justify-content: center; }
-
-.slider-men {
+.main-slider .slider-men {
   background-image: url("../images/1-layers.png"); }
-
-.slick-dots li button {
+.main-slider .slick-dots li button {
   height: 15px;
   width: 15px;
   border-radius: 50%;
   border: solid 2px white;
   cursor: pointer; }
-
-.slick-dotted.slick-slider {
+.main-slider .slick-dotted.slick-slider {
   margin-bottom: 0; }
-
-.slick-dots {
+.main-slider .slick-dots {
   bottom: 20px; }
-
-.slick-dots li button:before {
+.main-slider .slick-dots li button:before {
   content: ''; }
-
-.slick-dots .slick-active, .slick-dots .slick-active button:before {
+.main-slider .slick-dots .slick-active, .main-slider .slick-dots .slick-active button:before {
   background-color: white;
   height: 15px;
   width: 15px;
   border-radius: 50%; }
-
-.slick-next:before, .slick-prev:before {
+.main-slider .slick-next:before, .main-slider .slick-prev:before {
   opacity: 1;
   font-size: 28px; }
-
-.slick-next, .slick-prev {
+.main-slider .slick-next, .main-slider .slick-prev {
   top: 230px;
   height: 50px; }
-
-.slick-next {
+.main-slider .slick-next {
   right: 15px; }
-  .slick-next:before {
+  .main-slider .slick-next:before {
     content: "\276f"; }
-
-.slick-prev {
+.main-slider .slick-prev {
   left: 15px; }
-  .slick-prev:before {
+  .main-slider .slick-prev:before {
     content: "\276e"; }
-
-.slick-list {
+.main-slider .slick-list {
   z-index: -1; }
-
-.container-description {
+.main-slider .container-description {
   width: 70%;
   margin: 0 auto; }
-  .container-description h1 {
+  .main-slider .container-description h1 {
     position: relative;
     padding-bottom: 20px;
     margin-bottom: 20px; }
-    .container-description h1:before {
+    .main-slider .container-description h1:before {
       position: absolute;
       left: 50%;
       margin-left: -33px;
@@ -288,7 +287,7 @@ h1 {
       width: 66px;
       background: white;
       height: 2px; }
-  .container-description p {
+  .main-slider .container-description p {
     font-size: 20px;
     font-weight: bolder; }
 
@@ -355,40 +354,82 @@ h1 {
         width: 66px;
         background: black;
         height: 1px; }
-
-.close {
-  top: 10px;
-  right: 10px;
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  border: none;
-  background: white;
-  cursor: pointer; }
-  .close:before {
-    color: black;
-    content: "\2613";
-    font-size: 18px;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    transition: 0.3s; }
-
-.popup-group {
-  font-size: 0; }
-  .popup-group .email-popup {
-    cursor: pointer;
-    font-size: 14px;
-    width: 70%;
-    color: #999999;
-    border: solid 1px #999999;
-    padding: 10px; }
-  .popup-group .btn-popup {
-    cursor: pointer;
-    font-size: 14px;
-    width: 30%;
-    padding: 10px;
+  .popup .close {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    border: none;
     background: white;
-    border: solid 1px black; }
+    cursor: pointer; }
+    .popup .close:before {
+      color: black;
+      content: "\2613";
+      font-size: 18px;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      transition: 0.3s; }
+  .popup .popup-group {
+    font-size: 0; }
+    .popup .popup-group .email-popup {
+      cursor: pointer;
+      font-size: 14px;
+      width: 70%;
+      color: #999999;
+      border: solid 1px #999999;
+      padding: 10px; }
+    .popup .popup-group .btn-popup {
+      cursor: pointer;
+      font-size: 14px;
+      width: 30%;
+      padding: 10px;
+      background: white;
+      border: solid 1px black; }
+
+.wrap-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -15px; }
+  .wrap-card .item-card {
+    width: calc(33.3% - 30px);
+    font-size: 16px;
+    color: #999999;
+    margin: 0 15px 25px 15px; }
+    .wrap-card .item-card p {
+      margin-bottom: 24px; }
+    .wrap-card .item-card .card-img {
+      overflow: hidden;
+      margin-bottom: 24px; }
+      .wrap-card .item-card .card-img img {
+        max-width: none;
+        height: auto;
+        width: 100%; }
+    .wrap-card .item-card .btn {
+      margin-bottom: 24px; }
+
+.title {
+  color: black;
+  margin-bottom: 25px; }
+  .title h2 {
+    font-size: 32px;
+    font-weight: bolder; }
+  .title h3 {
+    font-size: 28px; }
+
+.section-brends {
+  background-image: url("../images/slider-brends/fon.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  overflow: hidden; }
+  .section-brends .slider {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin: 0 20px; }
+  .section-brends .slick-prev:before, .section-brends .slick-next:before {
+    opacity: 0; }
 
 /*max-width: 768px*/
 @media (max-width: 768px) {
@@ -429,15 +470,28 @@ h1 {
   .popup {
     display: block; }
     .popup .popup-img {
-      height: 250px;
+      height: 200px;
       width: 100%;
-      margin-bottom: 40px; }
+      margin-bottom: 20px; }
       .popup .popup-img img {
         width: 100%; }
     .popup .popup-description {
-      width: 100%; }
+      width: 100%;
+      padding: 5px 20px;
+      font-size: 12px; }
+      .popup .popup-description p {
+        margin-bottom: 20px; }
+    .popup .popup-group {
+      margin-bottom: 20px; }
+      .popup .popup-group .btn-popup, .popup .popup-group .email-popup {
+        font-size: 10px; }
 
-  .popup-group {
-    margin-bottom: 40px; } }
+  .wrap-card .item-card {
+    width: calc(50% - 30px); } }
+/*max-width: 480px*/
+@media (max-width: 480px) {
+  .wrap-card .item-card {
+    width: calc(100% - 30px);
+    text-align: justify; } }
 
 /*# sourceMappingURL=style.css.map */
