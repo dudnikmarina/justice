@@ -29,6 +29,8 @@ $p: #d8446e;
 $mr-b: 24px;
 
 * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .clearfix:after {
@@ -44,17 +46,22 @@ img {
   height: auto;
 }
 .btn{
+  cursor: pointer;
   background: black;
   font-weight: bold;
   font-size: 14px;
   color: white;
   padding: 9px 13px;
   border: none;
+  transition: 0.3s;
   .medium-btn{
     padding: 14px 55px;
   }
   .big-btn{
     width: 100%;
+  }
+  &:hover{
+    background: $color;
   }
 }
 a {
@@ -452,6 +459,15 @@ span{
       border: none;
       background: white;
       cursor: pointer;
+      transition: 0.3s;
+      border-radius: 5px;
+      transition: 0.3s;
+      &:hover{
+        background: $color;
+      }
+      &:hover:before{
+        color: white;
+      }
       &:before {
         color: black;
         content: "\2613";
@@ -461,6 +477,7 @@ span{
         transition: 0.3s;
       }
     }
+
     .popup-group {
       font-size: 0;
       .email-popup {
@@ -524,6 +541,7 @@ span{
   background-size: cover;
   background-position: 50% 50%;
   overflow: hidden;
+  margin-bottom: 45px;
 .slider{
   height: 100px;
   display: flex;
@@ -534,6 +552,15 @@ span{
     opacity: 0;
   }
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -613,6 +640,11 @@ span{
         width: calc(50% - 30px);
       }
     }
+    .masonry {
+      -moz-column-count: 2;
+      -webkit-column-count: 2;
+      column-count: 2;
+    }
   }
 
 
@@ -625,5 +657,10 @@ span{
       width: calc(100% - 30px);
       text-align: justify;
     }
+  }
+  .masonry {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
   }
 }

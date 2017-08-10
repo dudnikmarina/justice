@@ -17,10 +17,22 @@ $('.slider-brends').slick({
     slidesToScroll: 1,
     autoplay: true,
     pauseOnHover: true,
+    
+    /*responsive slick*/
     responsive: [{
+        breakpoint: 991,
+        settings: {
+            slidesToShow: 4,
+        }
+    }, {
         breakpoint: 768,
         settings: {
             slidesToShow: 3,
+        }
+    }, {
+        breakpoint: 480,
+        settings: {
+            slidesToShow: 2,
         }
     }]
     });
