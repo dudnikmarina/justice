@@ -22,17 +22,17 @@ $('.slider-brends').slick({
     responsive: [{
         breakpoint: 991,
         settings: {
-            slidesToShow: 4,
+            slidesToShow: 4
         }
     }, {
         breakpoint: 768,
         settings: {
-            slidesToShow: 3,
+            slidesToShow: 3
         }
     }, {
         breakpoint: 480,
         settings: {
-            slidesToShow: 2,
+            slidesToShow: 2
         }
     }]
     });
@@ -65,3 +65,13 @@ $('#wrapper-slider').css({'max-width': '1248px', 'margin': '0 auto', 'position':
 /* Модальное Окно*/
 var delay_popup = 5000;
 setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
+
+
+/*masonry*/
+var $grid = $('.grid').masonry({
+    // options...
+});
+// layout Masonry after each image loads
+$grid.imagesLoaded().progress( function() {
+    $grid.masonry('layout');
+});

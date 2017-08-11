@@ -41,6 +41,24 @@ $mr-b: 24px;
 :focus {
   outline: none;
 }
+h1{
+  font-size: 36px;
+  color: $cl-title;
+}
+h2{
+  font-size: 32px;
+  font-weight: bolder;
+  color: $cl-title;
+}
+h3{
+  font-size: 28px;
+  color: $cl-title;
+}
+h4{
+  font-size: 21px;
+  font-weight: bold;
+  color: $cl-title;
+}
 img {
   max-width: 100%;
   height: auto;
@@ -83,9 +101,6 @@ a {
   padding-left: 15px;
   padding-right: 15px;
   color: $color;
-}
-h1{
-  font-size: 36px;
 }
 .container-header{
   padding-top: 30px;
@@ -249,10 +264,6 @@ span{
 }
 .footer-item{
   margin: 0 20px 30px 20px;
-  h4{
-    color: $cl-title;
-    font-weight: 700;
-  }
 }
 .footer-list{
   font-size: 15px;
@@ -498,16 +509,16 @@ span{
       }
     }
   }
-.wrap-card{
+.card-wrap{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 -15px;
-  .item-card{
-    width: calc(33.3% - 30px);
+  margin: 0 -10px;
+  .card-item{
+    width: calc(33.3% - 20px);
     font-size: 16px;
     color: $color;
-    margin: 0 15px 25px 15px;
+    margin: 0 10px 25px 10px;
     p{
       margin-bottom: $mr-b;
     }
@@ -528,13 +539,6 @@ span{
 .title{
   color: black;
   margin-bottom: 25px;
-  h2{
-    font-size: 32px;
-    font-weight: bolder;
-  }
-  h3{
-    font-size: 28px;
-  }
 }
 .section-brends{
   background-image: url("../images/slider-brends/fon.png");
@@ -553,6 +557,52 @@ span{
   }
 }
 
+
+
+.grid{
+  form{
+    display: flex;
+  }
+  margin: 0 -10px;
+  .email{
+    width: 65%;
+    font-size: 15px;
+    font-style: italic;
+    color: #b5b9bd;
+    padding: 5px;
+    cursor: pointer;
+    border: solid 1px white;
+    border-radius: 5px;
+  }
+  .btn{
+    width: 35%;
+    font-size: 15px;
+    background: white;
+    color: black;
+  }
+}
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+  padding: 10px;
+  &:last-child{
+    margin-top: 21px;
+  }
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
 
 
 
@@ -635,15 +685,16 @@ span{
         }
       }
     }
-    .wrap-card{
-      .item-card{
+    .card-wrap{
+      .card-item{
         width: calc(50% - 30px);
       }
     }
-    .masonry {
-      -moz-column-count: 2;
-      -webkit-column-count: 2;
-      column-count: 2;
+    .grid {
+      .grid-sizer,
+      .grid-item {
+        width: 50%;
+      }
     }
   }
 
@@ -652,15 +703,17 @@ span{
 
 /*max-width: 480px*/
 @media (max-width: 480px){
-  .wrap-card{
-    .item-card{
+  .card-wrap{
+    .card-item{
       width: calc(100% - 30px);
       text-align: justify;
     }
   }
-  .masonry {
-    -moz-column-count: 1;
-    -webkit-column-count: 1;
-    column-count: 1;
+  .grid {
+    text-align: center;
+    .grid-sizer,
+    .grid-item {
+      width: 100%;
+    }
   }
 }
