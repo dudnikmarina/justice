@@ -1,6 +1,4 @@
-
 /*slick*/
-
 $('.main-slider').slick({
     dots: true,
     infinite: true,
@@ -9,7 +7,6 @@ $('.main-slider').slick({
     arrows: true
 });
 
-
 /*slick*/
 $('.slider-brends').slick({
     infinite: true,
@@ -17,7 +14,7 @@ $('.slider-brends').slick({
     slidesToScroll: 1,
     autoplay: true,
     pauseOnHover: true,
-    
+
     /*responsive slick*/
     responsive: [{
         breakpoint: 991,
@@ -68,10 +65,15 @@ setTimeout("document.getElementById('overlay').style.display='block'", delay_pop
 
 
 /*masonry*/
+
 var $grid = $('.grid').masonry({
-    // options...
-});
-// layout Masonry after each image loads
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
+})
 $grid.imagesLoaded().progress( function() {
-    $grid.masonry('layout');
+    $grid.masonry();
 });
+
+
+

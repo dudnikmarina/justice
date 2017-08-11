@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Justice</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
@@ -28,10 +35,10 @@
                     <div class="navbar-list">
                         <ul class="navbar-link">
                             <li>
-                                <a href="index.html">New</a>
+                                <a href="index.html" class="active">New</a>
                             </li>
                             <li>
-                                <a href="men.html" class="active">Men</a>
+                                <a href="men.html">Men</a>
                             </li>
                             <li>
                                 <a href="#">Women</a>
@@ -60,7 +67,6 @@
                             <li>
                                 <a href="#">3</a>
                             </li>
-
                         </ul>
                     </div>
                 </div>
@@ -69,10 +75,10 @@
                 <div class="menu-toggler">
                     <ul class="navbar-link">
                         <li>
-                            <a href="index.html">New</a>
+                            <a href="index.html" class="active">New</a>
                         </li>
                         <li>
-                            <a href="men.html" class="active">Men</a>
+                            <a href="men.html">Men</a>
                         </li>
                         <li>
                             <a href="#">Women</a>
@@ -87,107 +93,18 @@
     </header>
     <main>
         <div class="section">
-            <div class="main-slider">
-                <div class="slider-men">
-                    <div class="container container-slider">
-                        <div class="container-description">
-                            <h1>SUPREME</h1>
-                            <p>SHOP NOW</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-men">
-                    <div class="container container-slider">
-                        <div class="container-description">
-                            <h1>SUPREME</h1>
-                            <p>SHOP NOW</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-men">
-                    <div class="container container-slider">
-                        <div class="container-description">
-                            <h1>SUPREME</h1>
-                            <p>SHOP NOW</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-men">
-                    <div class="container container-slider">
-                        <div class="container-description">
-                            <h1>SUPREME</h1>
-                            <p>SHOP NOW</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-men">
-                    <div class="container container-slider">
-                        <div class="container-description">
-                            <h1>SUPREME</h1>
-                            <p>SHOP NOW</p>
-                        </div>
-                    </div>
+            <div class="container">
+                <div class="card-product_page">
+
+
+
                 </div>
             </div>
         </div>
-
-
-
-
-
     </main>
-    <div class="section">
-        <div class="container-popups">
-            <!-- Модальное Окно card-product  -->
-            <div id="overlay-product">
-                <div class="popup product-popup">
-                    <div class="popup-slider">
-                        <img src="images/product/product-popup.jpg">
-                    </div>
-                    <div class="popup-description">
-                        <div class="content">
-                            <div class="title">
-                                <div class="logo-brend">
-                                    <span class="icon-adidas-logo"></span>
-                                </div>
-                                <h5>adidas STR Graphic Crew Sweatshirt </h5>
-                                <p>£45</p>
-                            </div>
-                            <p>Casual-cool sweatshirt is brought to you by
-                                sportswear giant adidas and features a
-                                seriously soft knit in a long sleeve, crewneck
-                                silhouette. Finished with graphics at the front
-                                for a streetwear twist. </p>
-                        </div>
-                        <button class="close" onclick="document.getElementById('overlay-product').style.display='none';"></button>
-                    </div>
-                </div>
-            </div>
-            <!-- Модальное Окно  -->
-            <div id="overlay">
-                <div class="popup">
-                    <div class="popup-img">
-                        <img src="images/3-layers.png">
-                    </div>
-                    <div class="popup-description">
-                        <div class="popup-title">
-                            <h4>JOIN OUR MAILING LIST</h4>
-                        </div>
-                        <p>Join our mailing list for all the latest information  on product releases, competitions and special offers.</p>
-                        <p class="discount">GET 30% OFF YOUR NEXT ORDER</p>
-                        <form class="popup-group">
-                            <input type="email" class="email email-popup" name="email" placeholder="ENTER YOUR EMAIL ADDRESS">
-                            <button class="btn btn-popup">SIGN UP</button>
-                        </form>
-                        <button class="close" onclick="document.getElementById('overlay').style.display='none';"></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <footer>
         <div class="section">
-            <div class="container">
+            <div class="container ">
                 <div class="container-footer">
                     <div class="footer-item">
                         <ul class="footer-list">
@@ -271,6 +188,8 @@
 </div>
 <script src="script/jquery-3.2.1.js"></script>
 <script type="text/javascript" src="script/slick.min.js"></script>
+<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+<script src="script/masonry.pkgd.min.js"></script>
 <script src="script/script.js"></script>
 </body>
 </html>
