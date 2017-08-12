@@ -1,3 +1,4 @@
+
 /*slick*/
 $('.main-slider').slick({
     dots: true,
@@ -14,6 +15,7 @@ $('.slider-brends').slick({
     slidesToScroll: 1,
     autoplay: true,
     pauseOnHover: true,
+    arrows: true,
 
     /*responsive slick*/
     responsive: [{
@@ -56,7 +58,7 @@ $(function(){
     });
 });
 
-$('.slick-prev, .slick-next').wrapAll('<div id="wrapper-slider"></div>'); //*add wrapper for all selected classes*//
+$('.main-slider .slick-prev, .main-slider .slick-next').wrapAll('<div id="wrapper-slider"></div>'); //*add wrapper for all selected classes*//
 $('#wrapper-slider').css({'max-width': '1248px', 'margin': '0 auto', 'position': 'relative'});//*add style for new id*//
 
 /* Модальное Окно*/
