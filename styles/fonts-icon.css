@@ -1,59 +1,92 @@
 @font-face {
-    font-family: 'icomoon';
-    src:  url('../fonts/fonts-icon/icomoon.eot?ralqiw');
-    src:  url('../fonts/fonts-icon/icomoon.eot?ralqiw#iefix') format('embedded-opentype'),
-    url('../fonts/fonts-icon/icomoon.ttf?ralqiw') format('truetype'),
-    url('../fonts/fonts-icon/icomoon.woff?ralqiw') format('woff'),
-    url('../fonts/fonts-icon/icomoon.svg?ralqiw#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'icomoon';
+  src:  url('../fonts/fonts-icon/icomoon.eot?mjdwwi');
+  src:  url('../fonts/fonts-icon/icomoon.eot?mjdwwi#iefix') format('embedded-opentype'),
+    url('../fonts/fonts-icon/icomoon.ttf?mjdwwi') format('truetype'),
+    url('../fonts/fonts-icon/icomoon.woff?mjdwwi') format('woff'),
+    url('../fonts/fonts-icon/icomoon.svg?mjdwwi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-plus-circle:before {
+  content: "\e90c";
+}
+.icon-chevron-right2:before {
+  content: "\e907";
+}
+.icon-chevron-left2:before {
+  content: "\e908";
+}
+.icon-chevron-down:before {
+  content: "\e909";
+}
+.icon-chevron-up:before {
+  content: "\e90a";
+}
+.icon-x:before {
+  content: "\2613";
+}
 .icon-chevron-right:before {
-    content: "\2771";
+  content: "\276f";
 }
 .icon-chevron-left:before {
-    content: "\2770";
+  content: "\276e";
 }
 .icon-pinterest-p:before {
-    content: "\e906";
+  content: "\e906";
+}
+.icon-chevron-up:before {
+  content: "\e90a";
+}
+.icon-x:before {
+  content: "\2613";
+}
+.icon-chevron-right:before {
+  content: "\276f";
 }
 .icon-adidas-logo:before {
-    content: "\e901";
+  content: "\e901";
 }
 .icon-cart-icon:before {
-    content: "\e902";
+  content: "\e902";
 }
 .icon-search-icon:before {
-    content: "\e904";
+  content: "\e904";
 }
 .icon-user-icon:before {
-    content: "\e905";
+  content: "\e905";
 }
 .icon-instagram2:before {
-    content: "\e903";
+  content: "\e903";
 }
 .icon-google:before {
-    content: "\e900";
+  content: "\e900";
+}
+.icon-user-icon:before {
+  content: "\e905";
+}
+.icon-instagram2:before {
+  content: "\e903";
 }
 .icon-twitter:before {
-    content: "\ea96";
+  content: "\ea96";
 }
 .icon-facebook:before {
-    content: "\ea90";
+  content: "\ea90";
 }

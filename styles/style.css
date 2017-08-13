@@ -17,7 +17,6 @@ h1 {
 
 h2 {
   font-size: 32px;
-  font-weight: bolder;
   color: #000000; }
 
 h3 {
@@ -519,6 +518,161 @@ a {
 .grid-item img {
   display: block;
   width: 100%; }
+
+.container-men {
+  margin-bottom: 30px; }
+  .container-men h2 {
+    margin-bottom: 30px; }
+  .container-men p {
+    font-size: 20px;
+    color: black; }
+
+.breadcrumbs-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .breadcrumbs-list p {
+    align-items: center;
+    display: flex; }
+  .breadcrumbs-list ul {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .breadcrumbs-list .active {
+    font-weight: bold; }
+  .breadcrumbs-list p, .breadcrumbs-list a {
+    font-size: 16px;
+    color: black; }
+
+.breadcrumbs-nav li {
+  margin: 8px;
+  position: relative; }
+  .breadcrumbs-nav li:before {
+    position: absolute;
+    content: "/";
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    left: -10px; }
+  .breadcrumbs-nav li:first-child:before {
+    content: ''; }
+
+.container-numpage ul, .breadcrumbs-product ul {
+  display: flex;
+  align-items: center;
+  float: right; }
+  .container-numpage ul p, .breadcrumbs-product ul p {
+    display: flex;
+    align-items: center; }
+  .container-numpage ul li, .breadcrumbs-product ul li {
+    position: relative;
+    margin: 0 10px; }
+    .container-numpage ul li span:first-child, .breadcrumbs-product ul li span:first-child {
+      margin-right: 8px; }
+    .container-numpage ul li span:last-child, .breadcrumbs-product ul li span:last-child {
+      margin-left: 8px; }
+    .container-numpage ul li:before, .breadcrumbs-product ul li:before {
+      position: absolute;
+      content: "/";
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+      left: -13px; }
+    .container-numpage ul li:first-child:before, .breadcrumbs-product ul li:first-child:before {
+      content: ''; }
+.container-numpage a, .breadcrumbs-product a {
+  font-size: 16px;
+  color: black; }
+
+.container-breadcrumbs, .container-breadcrumbs {
+  margin-bottom: 20px; }
+
+.breadcrumbs-product {
+  display: flex; }
+  .breadcrumbs-product .filter {
+    margin-right: 40px; }
+    .breadcrumbs-product .filter span {
+      margin-right: 8px; }
+
+.colproduct {
+  margin-right: 20px; }
+
+.breadcrumbs-filters, .filter {
+  cursor: pointer; }
+
+.container_product-main {
+  margin-bottom: 20px;
+  display: flex; }
+  .container_product-main .product-main_sidebar {
+    width: 30%; }
+  .container_product-main .product-main_body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%; }
+  .container_product-main .product-main_close {
+    display: none; }
+  .container_product-main .product-main_active {
+    width: 100%; }
+
+#overlay-product {
+  display: none; }
+
+.card-product_wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px; }
+  .card-product_wrap .card-product {
+    margin: 0 10px 20px 10px;
+    width: calc(33.3% - 20px);
+    cursor: pointer; }
+    .card-product_wrap .card-product .card-body {
+      position: relative; }
+    .card-product_wrap .card-product .card-hover {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0; }
+      .card-product_wrap .card-product .card-hover .card-hover_body {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px 20px; }
+        .card-product_wrap .card-product .card-hover .card-hover_body span {
+          font-size: 30px;
+          color: #999999; }
+      .card-product_wrap .card-product .card-hover .card-hover_footer {
+        text-align: center;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.8);
+        font-size: 18px;
+        color: black; }
+    .card-product_wrap .card-product:hover .card-hover {
+      display: flex; }
+    .card-product_wrap .card-product .card-image {
+      height: 460px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 15px; }
+      .card-product_wrap .card-product .card-image img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: none;
+        height: 100%;
+        width: auto; }
+    .card-product_wrap .card-product .card-footer {
+      font-size: 18px; }
+      .card-product_wrap .card-product .card-footer .description {
+        color: black; }
+  .card-product_wrap .card-product_active {
+    width: calc(25% - 20px); }
 
 /*max-height: 480px*/
 @media (max-height: 440px) {
