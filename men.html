@@ -436,11 +436,22 @@
         <div class="container-popups">
             <!-- Модальное Окно card-product  -->
             <div id="overlay-product" class="overlay-product">
-                <div class="popup product-popup">
-                    <div class="popup-slider">
-                        <img src="images/product/card/3.jpg">
+                <div class="popup product-popup card-shoping">
+                    <div class="card-shoping_images card-shoping_slider">
+
+
+
+
+                        <div class="slick-product">
+                            <div class="slick-product_image"><img src="images/product/card/3.jpg"></div>
+                            <div class="slick-product_image"><img src="images/product/card/3.jpg"></div>
+                            <div class="slick-product_image"><img src="images/product/card/3.jpg"></div>
+                            <div><img src="images/product/card/3.jpg"></div>
+                            <div><img src="images/product/card/3.jpg"></div>
+                            <div><img src="images/product/card/3.jpg"></div>
+                        </div>
                     </div>
-                    <div class="popup-description">
+                    <div class="card-shoping-description">
                         <div class="content">
                             <div class="title">
                                 <div class="logo-brend">
@@ -454,6 +465,57 @@
                                 seriously soft knit in a long sleeve, crewneck
                                 silhouette. Finished with graphics at the front
                                 for a streetwear twist. </p>
+                        </div>
+                        <div class="card-shoping_color">
+                            <p><span>Color:</span> Grey</p>
+                            <div class="color"></div>
+                        </div>
+                        <div class="card-shoping_size">
+                            <ul>
+                                <li>
+                                    <p><span>Size</span> Size Chart</p>
+                                </li>
+                            </ul>
+                            <div class="counter">
+                                <p>Qty</p>
+                                <div id="bminus" class="minus">
+                                    <span class="icon-chevron-left2"></span>
+                                </div>
+                                <input type="text" id="count" class="number" value="1">
+                                <div id="bplus" class="plus">
+                                    <span class="icon-chevron-right2"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="size">
+                            <form >
+                                <ul>
+                                    <li>
+                                        <input class="input-size" type="radio" id="size-xs" name="slider-size">
+                                        <label for="size-xs">XS</label>
+                                    </li>
+
+                                    <li>
+                                        <input class="input-size" type="radio" id="size-s" name="slider-size">
+                                        <label for="size-s">S</label>
+                                    </li>
+                                    <li>
+                                        <input class="input-size" type="radio" id="size-m" name="slider-size">
+                                        <label for="size-m">M</label>
+                                    </li>
+                                    <li>
+                                        <input class="input-size" type="radio" id="size-l" name="slider-size">
+                                        <label for="size-l">L</label>
+                                    </li>
+                                    <li>
+                                        <input class="input-size" type="radio" id="size-xl" name="slider-size">
+                                        <label for="size-xl">XL</label>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div class="card-shoping_dutton">
+                            <button class="btn big-btn">ADD TO BAG</button>
                         </div>
                         <button class="close" onclick="document.getElementById('overlay-product').style.display='none';"></button>
                     </div>
@@ -557,7 +619,6 @@
                             <li>
                                 <a href="#" class="insta"><span class="icon-instagram2"></span></a>
                             </li>
-
                         </ul>
                     </div>
                 </div>

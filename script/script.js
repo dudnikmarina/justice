@@ -1,4 +1,3 @@
-
 /*slick*/
 $('.main-slider').slick({
     dots: true,
@@ -36,6 +35,7 @@ $('.slider-brends').slick({
     }]
 });
 
+$('.slick-product').slick();
 
 /*menu-navbar*/
 $(document).ready(function () {
@@ -56,6 +56,24 @@ $(document).ready(function () {
         $("#overlay-product").show(200);
     })
 });
+
+
+/*счетчик кол.*/
+var wrapper = document.querySelector('counter');
+var countInput = document.getElementById('count');
+var butM = document.getElementById('bminus');
+var butP = document.getElementById('bplus');
+var units = countInput.value.replace(/\d/g, '');
+butP.onclick = function() {
+    countInput.value = parseInt(countInput.value) + 1 + units;
+};
+butM.onclick = function() {
+    if (parseInt(countInput.value) > 1) {
+        countInput.value = parseInt(countInput.value) - 1 + units;
+    }
+};
+
+
 
 $(function(){
     $('.filter').click(function(){
@@ -89,22 +107,15 @@ $(function(){
     });
 });
 
+
 $('.main-slider .slick-prev, .main-slider .slick-next').wrapAll('<div id="wrapper-slider"></div>'); //*add wrapper for all selected classes*//
 $('#wrapper-slider').css({'max-width': '1248px', 'margin': '0 auto', 'position': 'relative'});//*add style for new id*//
+
 
 /* Модальное Окно*/
 var delay_popup = 5000;
 setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
 
 
-/*masonry*/
 
-var $grid = $('.grid').masonry({
-    itemSelector: '.grid-item',
-    columnWidth: '.grid-sizer',
-    percentPosition: true
-});
-$grid.imagesLoaded().progress( function() {
-    $grid.masonry();
-});
 
