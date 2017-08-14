@@ -124,15 +124,15 @@ a {
   background: white;
   cursor: pointer;
   span{
-  display: block;
-  background: $cl-title;
-  height: 3px;
-  width: 100%;
-  margin-bottom: 5px;
-  &:last-child{
-    margin-bottom: 0;
+    display: block;
+    background: $cl-title;
+    height: 3px;
+    width: 100%;
+    margin-bottom: 5px;
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
-}
 }
 .menu-active {
   position: relative;
@@ -156,9 +156,9 @@ a {
     margin-right: 50px;
   }
   a{
-  font-size: 18px;
-  font-weight: 400;
-  color: $color;
+    font-size: 18px;
+    font-weight: 400;
+    color: $color;
   }
   .active{
     color: $cl-hover;
@@ -166,31 +166,31 @@ a {
 }
 .icon-link{
   position: relative;
- li{
+  li{
     margin-right: 50px;
-   &:last-child  {
-     background: #cc0000;
-     border-radius: 50%;
-     font-size: 18px;
-     height: 1.5em;
-     width: 1.5em;
-     margin-right: 0;
-     line-height: 0;
-     align-items: center;
-     display: flex;
-     justify-content: center;
-     transition: 0.3s;
-     a{
-       color: white;
-       font-size: 15px;
-     }
-   }
- }
+    &:last-child  {
+      background: #cc0000;
+      border-radius: 50%;
+      font-size: 18px;
+      height: 1.5em;
+      width: 1.5em;
+      margin-right: 0;
+      line-height: 0;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      transition: 0.3s;
+      a{
+        color: white;
+        font-size: 15px;
+      }
+    }
+  }
   span{
     font-weight: bolder;
   }
   a{
-  font-size: 18px;
+    font-size: 18px;
     color: $cl-title;
     &:hover{
       color: $color;
@@ -212,7 +212,7 @@ a {
   width: 300px;
   text-align: center;
   .navbar-link{
-  display: block;
+    display: block;
     li{
       padding:20px 0;
       margin-right: 0;
@@ -255,7 +255,7 @@ a {
 .footer-list{
   font-size: 15px;
   a{
-  color: $color;
+    color: $color;
     &:hover{
       color: $cl-hover;
     }
@@ -515,21 +515,21 @@ a {
       margin-bottom: 0;
     }
   }
-    .title {
-      h5 {
-        font-size: 18px;
-      }
+  .title {
+    h5 {
+      font-size: 18px;
     }
-    color: $color;
-    font-size: 14px;
+  }
+  color: $color;
+  font-size: 14px;
   .logo-brend{
     color: $cl-title;
     font-size: 50px;
   }
-  }
-  #overlay-product {
-    display: block;
-  }
+}
+#overlay-product {
+  display: block;
+}
 .card-wrap{
   display: flex;
   flex-wrap: wrap;
@@ -567,12 +567,12 @@ a {
   background-position: 50% 50%;
   overflow: hidden;
   margin-bottom: 45px;
-.slider{
-  height: 60px;
-  display: flex;
-  align-items: center;
-  margin: 0 20px;
-}
+  .slider{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+  }
   .slick-list {
     margin: 30px;
   }
@@ -617,7 +617,7 @@ a {
     background: white;
     color: black;
   }
-  }
+}
 
 .grid-sizer,
 .grid-item {
@@ -643,13 +643,13 @@ a {
     display: flex;
   }
   display: flex;
-    align-items: center;
-    justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 
   ul{
-  display: flex;
-  align-items: center;
-  justify-content: center;}
+    display: flex;
+    align-items: center;
+    justify-content: center;}
   .active{
     font-weight: bold;
   }
@@ -683,16 +683,16 @@ a {
     }
     display: flex;
     align-items: center;
-float: right;
+    float: right;
     li{
       span:first-child{
-      margin-right: 8px;
+        margin-right: 8px;
       }
-        span:last-child{
-      margin-left: 8px;
+      span:last-child{
+        margin-left: 8px;
       }
       position: relative;
-        margin: 0 10px;
+      margin: 0 10px;
       &:before {
         position: absolute;
         content: "/";
@@ -734,6 +734,8 @@ float: right;
   margin-bottom: 20px;
   display: flex;
   .product-main_sidebar{
+    background-color: wheat;
+    height: 150px;
     width: 30%;
   }
   .product-main_body{
@@ -756,7 +758,6 @@ float: right;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -10px;
   .card-product{
     margin: 0 10px 20px 10px;
     width: calc(33.3% - 20px);
@@ -812,7 +813,7 @@ float: right;
     .card-footer{
       font-size: 18px;
       .description{
-      color: black;
+        color: black;
       }
     }
   }
@@ -835,96 +836,134 @@ float: right;
   }
 }
 
-/*max-width: 768px*/
-  @media (max-width: 768px) {
-    .navbar-link {
-      display: none;
+/*max-width: 991px*/
+@media (max-width: 991px) {
+  .card-product_wrap {
+    .colproduct {
+      margin-right: 0;
     }
-    .icon-link {
-      li {
-        margin-right: 20px;
-      }
-      a {
-        font-size: 12px;
-      }
+    .card-product {
+      width: calc(50% - 20px);
     }
-    .menu-toggler {
-      position: static;
-      width: 100%;
+    .card-product_active {
+      width: calc(33.3% - 20px);
     }
-    .container-footer {
-      justify-content: space-around;
-    }
-.main-slider {
-  .slider, .slider-men {
-    height: 300px;
   }
-  .slick-next:before, .slick-prev:before {
-    font-size: 20px;
+  .breadcrumbs-product {
+    .filter {
+    margin-right: 20px;
   }
-  .slick-next, .slick-prev {
-    top: 140px;
-  }
-  .slick-dots {
-    bottom: 5px;
   }
 }
 
-    .container-description {
-      h1 {
-        font-size: 25px
-      }
+
+/*max-width: 768px*/
+@media (max-width: 768px) {
+  .navbar-link {
+    display: none;
+  }
+  .icon-link {
+    li {
+      margin-right: 20px;
     }
-    .user-place_form {
-      right: -20px;
-      bottom: 0;
+    a {
+      font-size: 12px;
     }
-    .popup {
-      .popup-slider, .popup-img, .popup-description {
+  }
+  .menu-toggler {
+    position: static;
+    width: 100%;
+  }
+  .container-footer {
+    justify-content: space-around;
+  }
+  .main-slider {
+    .slider, .slider-men {
+      height: 300px;
+    }
+    .slick-next:before, .slick-prev:before {
+      font-size: 20px;
+    }
+    .slick-next, .slick-prev {
+      top: 140px;
+    }
+    .slick-dots {
+      bottom: 5px;
+    }
+  }
+
+  .container-description {
+    h1 {
+      font-size: 25px
+    }
+  }
+  .user-place_form {
+    right: -20px;
+    bottom: 0;
+  }
+  .popup {
+    .popup-slider, .popup-img, .popup-description {
+      width: 100%;
+    }
+    display: block;
+    .popup-img {
+      height: 200px;
+      margin-bottom: 20px;
+      img {
         width: 100%;
       }
-      display: block;
-      .popup-img {
-        height: 200px;
+    }
+    .popup-description {
+      p {
         margin-bottom: 20px;
-        img {
-          width: 100%;
-        }
       }
-      .popup-description {
-        p {
-          margin-bottom: 20px;
-        }
-        padding: 5px 20px;
-        font-size: 12px;
-      }
+      padding: 5px 20px;
+      font-size: 12px;
+    }
 
-      .popup-group {
-        margin-bottom: 20px;
-        .btn-popup, .email-popup {
-          font-size: 10px;
-        }
+    .popup-group {
+      margin-bottom: 20px;
+      .btn-popup, .email-popup {
+        font-size: 10px;
       }
     }
-    .card-wrap {
-      .card-item {
-        width: calc(50% - 30px);
-      }
-    }
-    .grid {
-      .grid-sizer,
-      .grid-item {
-        width: 50%;
-      }
-    }
-    .popup {
-      top: 10%;
-      transform: translate(-50%, 0);
-    }
- .title, .card-btn{
-   text-align: center;
- }
   }
+  .card-wrap {
+    .card-item {
+      width: calc(50% - 30px);
+    }
+  }
+  .grid {
+    .grid-sizer,
+    .grid-item {
+      width: 50%;
+    }
+  }
+  .popup {
+    top: 10%;
+    transform: translate(-50%, 0);
+  }
+  .title, .card-btn{
+    text-align: center;
+  }
+  .card-hover_footer{
+    display: none;
+  }
+}
+/*.container_product-main {
+  display: block;
+  .product-main_sidebar{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+  }
+  .product-main_body {
+    width: 100%;
+  }
+}*/
 
 /*max-width: 480px*/
 @media (max-width: 480px){
@@ -943,6 +982,14 @@ float: right;
     }
     .email {
       text-align: center;
+    }
+  }
+  .card-product_wrap {
+    .card-product {
+      width: calc(100% - 20px);
+    }
+    .card-product_active{
+      width: calc(50% - 20px);
     }
   }
 }

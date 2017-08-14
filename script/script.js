@@ -34,7 +34,7 @@ $('.slider-brends').slick({
             slidesToShow: 2
         }
     }]
-    });
+});
 
 
 /*menu-navbar*/
@@ -73,7 +73,6 @@ $(function(){
     });
 });
 
-
 /*добавить удалить клас при клике на меню*/
 $(function(){
     $('.navbar-toggler').click(function(){
@@ -99,5 +98,4 @@ var $grid = $('.grid').masonry({
 $grid.imagesLoaded().progress( function() {
     $grid.masonry();
 });
-
 
