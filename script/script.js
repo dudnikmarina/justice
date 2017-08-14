@@ -57,7 +57,6 @@ $(document).ready(function () {
     })
 });
 
-
 $(function(){
     $('.filter').click(function(){
         $('.product-main_sidebar').addClass('product-main_close');
@@ -67,10 +66,20 @@ $(function(){
 });
 $(function(){
     $('.breadcrumbs-filters').click(function(){
-        $('.product-main_sidebar').removeClass('product-main_close');
+        $('.product-main_sidebar').removeClass('product-main_close', 'block');
         $('.product-main_body').removeClass('product-main_active');
         $('.card-product').removeClass('card-product_active');
     });
+});
+$(document).ready(function () {
+    $(".breadcrumbs-filters").click(function () {
+        $(".product-main_sidebar").show(200);
+    })
+});
+$(document).ready(function () {
+    $(".filter").click(function () {
+        $(".product-main_sidebar").hide(200);
+    })
 });
 
 /*добавить удалить клас при клике на меню*/
@@ -94,7 +103,7 @@ var $grid = $('.grid').masonry({
     itemSelector: '.grid-item',
     columnWidth: '.grid-sizer',
     percentPosition: true
-})
+});
 $grid.imagesLoaded().progress( function() {
     $grid.masonry();
 });

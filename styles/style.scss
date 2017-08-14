@@ -734,7 +734,6 @@ a {
   margin-bottom: 20px;
   display: flex;
   .product-main_sidebar{
-    background-color: wheat;
     height: 150px;
     width: 30%;
   }
@@ -800,14 +799,14 @@ a {
       overflow: hidden;
       position: relative;
       margin-bottom: 15px;
+      background: #f3efec;
       img{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         max-width: none;
-        height: 100%;
-        width: auto;
+        height: auto;
       }
     }
     .card-footer{
@@ -829,12 +828,7 @@ a {
 
 
 
-/*max-height: 480px*/
-@media (max-height: 440px) {
-  .popup {
-    top: 80%;
-  }
-}
+
 
 /*max-width: 991px*/
 @media (max-width: 991px) {
@@ -943,27 +937,52 @@ a {
     top: 10%;
     transform: translate(-50%, 0);
   }
+  .container_product-main{
+    display: block;
+    .product-main_sidebar{
+      display: none;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      z-index: 1;
+    }
+    .product-main_body{
+      width: 100%;
+    }
+    .card-product_wrap {
+      .card-product_active {
+        width: calc(50% - 20px);
+      }
+    }
+    .product-main_close{
+      display: none;
+    }
+    .product-main_active{
+      width: 100%;
+    }
+  }
   .title, .card-btn{
     text-align: center;
   }
-  .card-hover_footer{
+  .colproduct, .card-hover_footer{
     display: none;
   }
-}
-/*.container_product-main {
+.breadcrumbs-list, .breadcrumbs-product{
   display: block;
-  .product-main_sidebar{
+}
+  .breadcrumbs-list ul {
+    width: 100%;
+  }
+  .breadcrumbs-product{
+  position: relative;
+}
+  .filter{
     position: absolute;
-    z-index: 1;
+    top: 65px;
     right: 0;
-    left: 0;
-    background: rgba(255, 255, 255, 0.8);
-    width: 100%;
   }
-  .product-main_body {
-    width: 100%;
-  }
-}*/
+}
+
 
 /*max-width: 480px*/
 @media (max-width: 480px){
@@ -984,12 +1003,14 @@ a {
       text-align: center;
     }
   }
-  .card-product_wrap {
-    .card-product {
-      width: calc(100% - 20px);
-    }
-    .card-product_active{
-      width: calc(50% - 20px);
+  .container_product-main{
+    .card-product_wrap{
+      .card-product{
+        width: calc(100% - 20px);
+      }
+      .card-product_active{
+        width: calc(100% - 20px);
+      }
     }
   }
 }
