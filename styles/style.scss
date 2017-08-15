@@ -19,6 +19,9 @@ $mr-b: 24px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+.active{
+  color: black;
+}
 .clearfix:after {
   content: "";
   display: table;
@@ -72,6 +75,7 @@ img {
   transition: 0.3s;
   &:hover {
     background: $color;
+    color: white;
   }
 }
 
@@ -455,7 +459,6 @@ a {
     font-size: 14px;
     line-height: 1.7;
   }
-
   .close {
     top: 10px;
     right: 10px;
@@ -484,22 +487,28 @@ a {
   }
   .popup-group {
     font-size: 0;
+    height: 50px;
     .email-popup {
       cursor: pointer;
       font-size: 14px;
       width: 70%;
       color: $color;
       border: solid 1px $color;
-      padding: 10px;
+      padding: 0 10px;
+      height: 100%;
     }
     .btn-popup {
       cursor: pointer;
       font-size: 14px;
       width: 30%;
-      padding: 10px;
+      padding: 0 10px;
       background: white;
       color: black;
       border: solid 1px black;
+      height: 100%;
+      &:hover{
+        background: $color;
+      }
     }
   }
 }
@@ -697,7 +706,6 @@ a {
     margin-right: 40px;
     span{
       margin-right: 8px;
-
     }
   }
 }
@@ -798,6 +806,7 @@ a {
   }
 }
 .card-shoping{
+  font-size: 0;
   .popup-description{
     width: 50%;
   }
@@ -815,8 +824,6 @@ a {
     span{
       margin-right: 15px;
     }
-
-
   }
   .color{
       background-color: #dddad5;
@@ -833,9 +840,9 @@ a {
     width: 100%;
   }
   .card-shoping-description{
-    padding: 10px 40px;
+    font-size: 14px;
+    padding: 0 40px;
     width: 50%;
-
   }
   .content{
     border-bottom: solid 1px #888888;
@@ -857,12 +864,6 @@ a {
     }
   }
   color: $color;
-  font-size: 14px;
-  .logo-brend{
-    color: $cl-title;
-    font-size: 50px;
-  }
-
 }
 .counter {
   align-items: center;
@@ -883,9 +884,6 @@ a {
     cursor: pointer;
   }
 }
-.logo-brend{
-  text-align: center;
-}
 .size ul {
   display: flex;
   li {
@@ -895,13 +893,25 @@ a {
     display: none;
   }
   input[type=radio] + label{
+    position: relative;
     cursor: pointer;
-    border-radius: 50%;
-    padding: 5px 7px;
+    margin-right: 12px;
+  }
   }
   input[type=radio]:checked + label{
-    border: solid 1px black;
     color: black;
+    cursor: pointer;
+    &:before{
+      content: '';
+      position: absolute;
+      height: 26px;
+      width: 26px;
+      right: 50%;
+      top: 50%;
+      margin-top: -13px;
+      margin-right: -14px;
+      border: solid 1px black;
+      border-radius: 50%;
   }
 }
 .size{
@@ -939,6 +949,70 @@ a {
 .card-shoping_dutton{
 text-align: right;
 }
+.grid .btn {
+  width: 35%;
+  font-size: 15px;
+  background: white;
+  color: black;
+  padding: 9px 14px;
+  transition: 0.3s;
+  &:hover{
+    background: $color;
+    color: white;
+  }
+}
+.slick-product_image{
+  min-height: 500px;
+  overflow: hidden;
+  position: relative;
+  img{
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    bottom: -50%;
+    right: -50%;
+    margin: auto;
+    max-width: none;
+  }
+}
+.logo-brend{
+  width: 65px;
+  margin: 10px auto;
+}
+.card-page{
+  .card-shoping-description{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .logo-brend{
+    width: 65px;
+    margin: 0 0;
+    float: right;
+  }
+  .card-shoping_nav{
+    margin-bottom: 20px;
+    ul{
+      display: flex;
+    }
+    li{
+      margin-right: 20px;
+    }
+    a{
+      color: $color;
+    }
+    .active{
+      color: black;
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+
+
+
 
 
 /*max-width: 991px*/
@@ -1008,9 +1082,9 @@ text-align: right;
     right: -20px;
     bottom: 0;
   }
-  .popup{
+  .popup {
     display: block;
-   .popup-img, .popup-description {
+    .popup-img, .popup-description {
       width: 100%;
     }
     .popup-img {
@@ -1050,16 +1124,16 @@ text-align: right;
     top: 10%;
     transform: translate(-50%, 0);
   }
-  .container_product-main{
+  .container_product-main {
     display: block;
-    .product-main_sidebar{
+    .product-main_sidebar {
       display: none;
       width: 100%;
       background: rgba(255, 255, 255, 0.8);
       position: absolute;
       z-index: 1;
     }
-    .product-main_body{
+    .product-main_body {
       width: 100%;
     }
     .card-product_wrap {
@@ -1067,44 +1141,57 @@ text-align: right;
         width: calc(50% - 20px);
       }
     }
-    .product-main_close{
+    .product-main_close {
       display: none;
     }
-    .product-main_active{
+    .product-main_active {
       width: 100%;
     }
   }
-  .title, .card-btn{
+  .title, .card-btn {
     text-align: center;
   }
-  .colproduct, .card-hover_footer{
+  .colproduct, .card-hover_footer {
     display: none;
   }
-.breadcrumbs-list, .breadcrumbs-product{
-  display: block;
-}
+  .breadcrumbs-list, .breadcrumbs-product {
+    display: block;
+  }
   .breadcrumbs-list ul {
     width: 100%;
   }
-  .breadcrumbs-product{
-  position: relative;
-}
-  .filter{
+  .breadcrumbs-product {
+    position: relative;
+  }
+  .filter {
     position: absolute;
     top: 65px;
     right: 0;
   }
-  .card-shoping{
-    .card-shoping-description{
+  .card-shoping {
+    .card-shoping-description {
       width: 100%;
     }
-    .card-shoping_images{
+    .card-shoping_images {
       margin-bottom: 20px;
       width: 100%;
     }
   }
+  .card-shoping_dutton {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .card-page{
+  .logo-brend {
+    width: 65px;
+    float: none;
+    margin: 0 auto;
+  }
+    .btn-medium{
+      width: 100%;
+    }
+  }
 }
-
 
 /*max-width: 480px*/
 @media (max-width: 480px){

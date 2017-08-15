@@ -7,6 +7,9 @@ $('.main-slider').slick({
     arrows: true
 });
 
+$('.main-slider .slick-prev, .main-slider .slick-next').wrapAll('<div id="wrapper-slider"></div>'); //*add wrapper for all selected classes*//
+$('#wrapper-slider').css({'max-width': '1248px', 'margin': '0 auto', 'position': 'relative'});//*add style for new id*//
+
 /*slick*/
 $('.slider-brends').slick({
     infinite: true,
@@ -34,8 +37,6 @@ $('.slider-brends').slick({
         }
     }]
 });
-
-$('.slick-product').slick();
 
 /*menu-navbar*/
 $(document).ready(function () {
@@ -108,14 +109,11 @@ $(function(){
 });
 
 
-$('.main-slider .slick-prev, .main-slider .slick-next').wrapAll('<div id="wrapper-slider"></div>'); //*add wrapper for all selected classes*//
-$('#wrapper-slider').css({'max-width': '1248px', 'margin': '0 auto', 'position': 'relative'});//*add style for new id*//
-
 
 /* Модальное Окно*/
 var delay_popup = 5000;
 setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
 
-
+$('.slick-product').slick();
 
 
