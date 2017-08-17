@@ -824,10 +824,17 @@ a {
     }
   }
   .color{
-      background-color: #dddad5;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+    li{
+      margin: 0 5px;
       width: 24px;
       height: 24px;
-      line-height: 0;
+    }
+    .grey{
+      background-color: #dddad5;
+    }
     }
   span{
     color: $cl-title;
@@ -930,19 +937,20 @@ a {
   margin: -5px;
 }
 .item_image{
-  background: #f6f2ef;
   width: calc(33.3% - 10px);
   margin: 5px;
   position: relative;
   overflow: hidden;
   height: 300px;
   img{
-    width: 100%;
     max-width: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: -50%;
+    left: -50%;
+    bottom: -50%;
+    right: -50%;
+    margin: auto;
+    height: 100%;
   }
 }
 .card-shoping_dutton{
@@ -1156,12 +1164,36 @@ ul#menu li ul li a:hover {
       background-color: #777;
     }
   }
-
-
 }
-
-
-
+.breadcrumbs-filters{
+  display: none;
+  span{
+    margin-left: 8px;
+  }
+}
+.breadcrumbs-filters_active{
+  display: block;
+}
+.filter_close{
+  display: none;
+}
+.container-prevnext{
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  a{
+    color: black;
+    display: flex;
+    align-items: center;
+  }
+  span{
+    font-weight: bold;
+    font-size: 25px;
+  }
+}
+.card-page{
+  margin-bottom: 40px;
+}
 
 
 
@@ -1353,12 +1385,17 @@ ul#menu li ul li a:hover {
       margin-right: 0;
     }
   }
-
   ul#menu {
     padding: 0 50px 50px 50px;
   }
   .colproduct, .card-hover_footer {
     display: none;
+  }
+  .breadcrumbs-filters{
+    display: block;
+  }
+  .item_image{
+    width: calc(33.3% - 10px);
   }
 }
 
@@ -1397,7 +1434,7 @@ ul#menu li ul li a:hover {
     }
   }
   .item_image{
-    width: calc(100% - 10px);
+    width: calc(50% - 10px);
   }
 }
 
