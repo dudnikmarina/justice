@@ -980,6 +980,9 @@ ul#menu li ul li a:hover {
 .card-page {
   margin-bottom: 40px; }
 
+.filter_close {
+  display: none; }
+
 /*max-width: 991px*/
 @media (max-width: 991px) {
   .card-product_wrap .colproduct {

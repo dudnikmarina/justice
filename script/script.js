@@ -115,6 +115,7 @@ $(function(){
         $('.product-main_body').addClass('product-main_active');
         $('.card-product').addClass('card-product_active');
         $('.breadcrumbs-filters').addClass('breadcrumbs-filters_active');
+        $('.filter').addClass('filter_close');
     });
 });
 $(function(){

@@ -1194,6 +1194,9 @@ ul#menu li ul li a:hover {
 .card-page{
   margin-bottom: 40px;
 }
+.filter_close{
+  display: none;
+}
 
 
 
@@ -1224,9 +1227,6 @@ ul#menu li ul li a:hover {
     }
   }
 }
-
-
-
 
 /*max-width: 768px*/
 @media (max-width: 768px) {
